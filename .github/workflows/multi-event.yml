@@ -1,0 +1,16 @@
+on:
+   push:
+      - main
+      - dev
+   pull_request:
+      branches:
+         - main
+
+jobs:
+   hellow_world:
+      runs-on:
+      steps:
+         - name:  "Echo ya"
+           run:
+              echo "REF: $GITHUB_REF"
+              echo "Job ID: $GITHUB_Job"
